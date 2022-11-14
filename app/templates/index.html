@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Lista de contacto</h1>
+
+  <br>
+  <a href="{{ url_for('ingresar_contacto') }}"><button type="button" class="btn btn-primary">Ingresar contacto</button></a>
+  <br><br>
+  <!-- crear tabla con lista de contacto -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Organismo</th>
+        <th scope="col">Función</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in contacto %}
+      <tr>
+        <th scope="row">{{ p.id }}</th>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.apellido }}</td>
+        <td>{{ p.telefono }}</td>
+        <td>{{ p.organismo }}</td>
+        <td>{{ p.funcion }}</td>
+        <td>
+          <a href="{{ url_for('index', borrar=p.id) }}"><span class="badge bg-danger">Eliminar</span></a>
+          <a href="{{ url_for('editar_contacto', id_empleado=p.id) }}"><span class="badge bg-secondary">Editar</span></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+

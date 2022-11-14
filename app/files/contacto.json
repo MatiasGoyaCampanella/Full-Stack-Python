@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Pablo",
+        "apellido": "Fernandez",
+        "telefono": "2312544546",
+        "organismo": "AA",
+        "funcion": "Informatica",
+        "id": 1
+    },
+    {
+        "nombre": "Raul",
+        "apellido": "Ricci",
+        "telefono": "235432123",
+        "organismo": "Municipal",
+        "funcion": "Director",
+        "id": 2
+    },
+    {
+        "nombre": "Pedro",
+        "apellido": "Gomez",
+        "telefono": "675465323",
+        "organismo": "Ministerio",
+        "funcion": "Operador",
+        "id": 3
+    }
+]
