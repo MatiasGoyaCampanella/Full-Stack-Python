@@ -23,7 +23,7 @@ def ingresar_contacto():
         return redirect(url_for('index'))
     if contacto_form.validate_on_submit():
         datos_nuevos = { 'nombre': contacto_form.nombre.data, 'apellido': contacto_form.apellido.data, 
-                         'telefono': contacto_form.telefono.data }
+                         'telefono': contacto_form.telefono.data,  'organismo': contacto_form.organismo.data, 'funcion': contacto_form.funcion.data }
         agregar_contacto(datos_nuevos)
         flash('Se ha agregado un nuevo empleado', 'success')
         return redirect(url_for('index'))
@@ -41,7 +41,7 @@ def editar_contacto(id_empleado):
                          'telefono': contacto_form.telefono.data, 'organismo': contacto_form.organismo.data, 'funcion': contacto_form.funcion.data }
         eliminar_contacto(id_empleado)  # Eliminamos el contacto antiguo
         agregar_contacto(datos_nuevos)  # Agregamos el nuevo contacto
-        flash('Se ha editado el empleado exitosamente', 'success')
+        flash('Se ha editado el contacto exitosamente', 'success')
         return redirect(url_for('index'))
     return render_template('editar_contacto.html', titulo="Contacto", contacto_form=contacto_form)
 

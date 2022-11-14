@@ -22,5 +22,13 @@
         "organismo": "Ministerio",
         "funcion": "Operador",
         "id": 3
+    },
+    {
+        "nombre": "Luis",
+        "apellido": "Roca",
+        "telefono": "4154467997",
+        "organismo": "Ministerio de Justicia",
+        "funcion": "Jefe de Inform\u00e1tica",
+        "id": 4
     }
 ]
