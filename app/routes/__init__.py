@@ -67,3 +67,7 @@ def logout():
     session.pop('usuario', None)
     return redirect(url_for('login'))
 
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('errors/404.html', titulo='Error 404', esconder_navbar=True),404
+    
